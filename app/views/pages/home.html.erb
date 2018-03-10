@@ -1,16 +1,17 @@
-<h1>Idea Machine</h1>
-<p>Throw an idea inside</p>
+<div class="container">
 
+  <h1>Idea Machine</h1>
+  <p>Throw an idea inside</p>
 
-<%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
-  <%= f.input :idea_content %>
-  <%= f.button :submit %>
-<% end %>
+  <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
+    <%= f.input :idea_content %>
+    <%= f.button :submit %>
+  <% end %>
 
-<ol>
-<% Idea.all.each do |idea| %>
-  <li>
-  <%= idea.idea_content %>
-  </li>
-<% end %>
-</ol>
+  <ol>
+    <% Idea.all.each do |idea| %>
+      <li><%= idea.idea_content %></li>
+    <% end %>
+  </ol>
+
+</div>
