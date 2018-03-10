@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Idea Machine</h1>
+<p>Throw an idea inside</p>
+
+
+<%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
+  <%= f.input :idea_content %>
+  <%= f.button :submit %>
+<% end %>
+
+<ol>
+<% Idea.all.each do |idea| %>
+  <li>
+  <%= idea.idea_content %>
+  </li>
+<% end %>
+</ol>
