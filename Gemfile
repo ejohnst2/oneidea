@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'simple_form'
+gem "react_on_rails", "10.0.0"
+
 
 
 group :development do
