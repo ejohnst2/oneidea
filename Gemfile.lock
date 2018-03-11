@@ -67,6 +67,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    libv8 (5.9.211.38.1-x86_64-darwin-17)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -78,6 +79,8 @@ GEM
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
+    mini_racer (0.1.14)
+      libv8 (~> 5.9)
     minitest (5.11.3)
     multi_json (1.13.1)
     nio4r (2.2.0)
@@ -191,6 +194,7 @@ DEPENDENCIES
   font-awesome-sass (~> 4.7)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
+  mini_racer
   pg (~> 0.21)
   pry-byebug
   pry-rails
