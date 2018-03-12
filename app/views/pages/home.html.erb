@@ -4,13 +4,9 @@
 
 <!-- # 1 dropZone component -->
 
-  <div class="idea-header">
-      <h1>Idea Machine</h1>
-      <p>Throw an idea inside</p>
-      <%#= react_component("HelloWorldApp", props: @hello_world_props, prerender: false) %>
-  </div>
+  <%= react_component("DropZone", props: @hello_world_props, prerender: false) %>
 
-  <!-- # 2 inputField component -->
+<!-- # 2 inputField component -->
 
   <div class="idea-bucket">
       <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
