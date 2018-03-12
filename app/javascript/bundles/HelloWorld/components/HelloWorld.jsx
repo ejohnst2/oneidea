@@ -25,12 +25,12 @@ export default class HelloWorld extends React.Component {
     return (
       <div>
         <h3>
-          Hello, {this.state.name}!
+          Here's an idea, what if ... {this.state.name}!
         </h3>
         <hr />
         <form >
           <label htmlFor="name">
-            What if you actually:
+            What if:
           </label>
           <input
             id="name"

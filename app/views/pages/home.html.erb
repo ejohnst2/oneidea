@@ -2,6 +2,8 @@
 
   <h1>Idea Machine</h1>
   <p>Throw an idea inside</p>
+  <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: false) %>
+
 
   <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
     <%= f.input :idea_content %>
