@@ -1,40 +1,41 @@
 <div class="container">
 
-<!-- we should have 6 components -->
+<!-- we should have 5 components -->
 
-<!-- headerTop component -->
-
-<!-- inputField component -->
-
-<!-- ideaParameters component -->
-
-<!-- ideaList component -->
-
-<!-- ideaListItem component -->
-
-<!-- generateButton component -->
-
-
+<!-- # 1 headerTop component -->
 
   <div class="idea-header">
-    <h1>Idea Machine</h1>
-    <p>Throw an idea inside</p>
-    <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: false) %>
+      <h1>Idea Machine</h1>
+      <p>Throw an idea inside</p>
+      <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: false) %>
   </div>
+
+  <!-- # 2 inputField component -->
 
   <div class="idea-bucket">
-    <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
-      <%= f.input :idea_content %>
-      <%= f.button :submit %>
-    <% end %>
+      <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
+        <%= f.input :idea_content %>
+        <%= f.button :submit %>
+      <% end %>
   </div>
 
-<div class="idea-board">
-   <ol>
-    <% Idea.all.each do |idea| %>
-      <li><%= idea.idea_content %></li>
-    <% end %>
-  </ol>
-</div>
+  <!-- # 3 ideaParameters component -->
+
+
+  <!-- # 4 ideaList component -->
+
+  <div class="idea-board">
+     <ol>
+      <% Idea.all.each do |idea| %>
+        <li><%= idea.idea_content %></li>
+      <% end %>
+    </ol>
+  </div>
+
+<!-- # 5 ideaListItem component -->
+
+
+<!-- # 6 generateButton component -->
+
 
 </div>
