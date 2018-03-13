@@ -1,1 +1,0 @@
-IdeaBoxHeader.jsx

@@ -1,19 +1,37 @@
 <div class="container">
 
-  <h1>Idea Machine</h1>
-  <p>Throw an idea inside</p>
-  <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: false) %>
+<!-- we should have 5 components -->
+
+<!-- # 1 dropZone component -->
+
+  <%= react_component("DropZone", props: @hello_world_props, prerender: false) %>
+
+<!-- # 2 inputField component -->
+
+  <div class="idea-bucket">
+      <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
+        <%= f.input :idea_content %>
+        <%= f.button :submit %>
+      <% end %>
+  </div>
+
+  <!-- # 3 ideaParameters component -->
 
 
-  <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
-    <%= f.input :idea_content %>
-    <%= f.button :submit %>
-  <% end %>
+  <!-- # 4 ideaList component -->
 
-  <ol>
-    <% Idea.all.each do |idea| %>
-      <li><%= idea.idea_content %></li>
-    <% end %>
-  </ol>
+  <div class="idea-board">
+     <ol>
+      <% Idea.all.each do |idea| %>
+        <li><%= idea.idea_content %></li>
+      <% end %>
+    </ol>
+  </div>
+
+<!-- # 5 ideaListItem component -->
+
+
+<!-- # 6 generateButton component -->
+
 
 </div>
